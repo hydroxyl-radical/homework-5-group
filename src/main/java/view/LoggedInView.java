@@ -121,7 +121,7 @@ public class LoggedInView extends JPanel implements PropertyChangeListener {
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         if (evt.getPropertyName().equals("state")) {
-            final LoggedInState state = (LoggedInState) evt.getNewValue();
+            LoggedInState state = (LoggedInState) evt.getNewValue();
             username.setText(state.getUsername());
         }
         else if (evt.getPropertyName().equals("password")) {
